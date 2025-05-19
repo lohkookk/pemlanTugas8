@@ -106,7 +106,6 @@ public class DaftarUlangMahasiswa extends JFrame {
         dataDialog.setLayout(new BorderLayout());
         dataDialog.getContentPane().setBackground(new Color(45, 45, 45));
     
-        // Judul
         JLabel titleLabel = new JLabel("Data Mahasiswa", JLabel.CENTER);
         titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 18));
         titleLabel.setForeground(Color.WHITE);
@@ -114,8 +113,7 @@ public class DaftarUlangMahasiswa extends JFrame {
         titleLabel.setBackground(new Color(30, 30, 30));
         titleLabel.setBorder(BorderFactory.createEmptyBorder(15, 10, 15, 10));
     
-        // JTextArea lebih lebar
-        JTextArea dataArea = new JTextArea(10, 45); // 45 kolom = lebih lebar
+        JTextArea dataArea = new JTextArea(10, 45); 
         dataArea.setText(data);
         dataArea.setEditable(false);
         dataArea.setFont(new Font("Consolas", Font.PLAIN, 14));
@@ -125,18 +123,16 @@ public class DaftarUlangMahasiswa extends JFrame {
         dataArea.setLineWrap(true);
         dataArea.setWrapStyleWord(true);
         dataArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        dataArea.setPreferredSize(new Dimension(500, 200)); // Ukuran lebih lebar
+        dataArea.setPreferredSize(new Dimension(500, 200));
     
-        // Panel tengah dengan GridBagLayout dan padding simetris
         JPanel centerPanel = new JPanel(new GridBagLayout());
         centerPanel.setBackground(new Color(45, 45, 45));
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.insets = new Insets(0, 30, 30, 30); // Padding kiri-kanan-bawah
+        gbc.insets = new Insets(0, 30, 30, 30); 
         centerPanel.add(dataArea, gbc);
     
-        // Tombol
         JButton closeButton = new JButton("Tutup");
         closeButton.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         closeButton.setFocusPainted(false);
@@ -150,12 +146,11 @@ public class DaftarUlangMahasiswa extends JFrame {
         buttonPanel.add(closeButton);
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
     
-        // Tambahkan komponen
         dataDialog.add(titleLabel, BorderLayout.NORTH);
         dataDialog.add(centerPanel, BorderLayout.CENTER);
         dataDialog.add(buttonPanel, BorderLayout.SOUTH);
     
-        dataDialog.setSize(600, 400); // Ukuran dialog diperbesar sesuai area teks
+        dataDialog.setSize(600, 400); 
         dataDialog.setLocationRelativeTo(this);
         dataDialog.setVisible(true);
     }
